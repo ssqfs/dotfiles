@@ -33,6 +33,7 @@ Plug 'scrooloose/nerdcommenter'
 
 " Using a non-master branch
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+Plug 'Valloric/YouCompleteMe'
 
 " Highlight trailing whitespace
 Plug 'bronson/vim-trailing-whitespace'
@@ -41,8 +42,10 @@ Plug 'bronson/vim-trailing-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 
 " colorscheme
-Plug 'flazz/vim-colorschemes'
 Plug 'liuchengxu/space-vim-dark'
+
+" Indent line
+Plug 'Yggdroot/indentLine'
 
 " status line
 Plug 'itchyny/lightline.vim'
@@ -68,6 +71,12 @@ call plug#end()
 " Set linenumber
 set nu
 
+" set cursorline
+set cul
+
+" source .vimrc
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " Use mouse in all modes
 set mouse=a
 
@@ -91,7 +100,7 @@ nmap <leader>w :w!<cr>
 
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
-command W w !sudo tee % > /dev/null
+command! W w !sudo tee % > /dev/null
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -223,7 +232,7 @@ set tw=500
 
 set ai "Auto indent
 set si "Smart indent
-set wrap "Wrap lines
+"set wrap "Wrap lines
 
 
 """"""""""""""""""""""""""""""
