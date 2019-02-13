@@ -114,3 +114,13 @@ let g:lightline = {
       \ 'separator': { 'left': ' ', 'right': ' ' },
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => YouCompleteMe
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let g:ycm_max_num_candidates = 10
+nnoremap <leader>jd :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>jj :YcmCompleter GoToDefinition<CR>
+nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
+set completeopt-=preview
